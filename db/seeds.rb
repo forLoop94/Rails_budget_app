@@ -8,11 +8,16 @@
 
 require 'faker'
 
-User.destroy_all
-
 10.times do |index|
   User.create(
     name: Faker::Name.name
   )
 end
 
+50.times do
+  Activity.create(
+    name: Faker::Food.ingredient,
+    amount: Faker::Number.between(from: 1, to: 100),
+    author_id: User.all.sample.id
+  )
+end
