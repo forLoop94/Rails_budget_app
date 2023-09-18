@@ -6,9 +6,13 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
+require 'faker'
+
 User.destroy_all
 
-User.create(name: "Charles")
-User.create(name: "Emem")
-User.create(name: "Esther")
-User.create(name: "Precious")
+10.times do |index|
+  User.create(
+    name: Faker::Name.name
+  )
+end
+

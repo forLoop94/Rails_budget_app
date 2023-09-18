@@ -10,9 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_09_18_090618) do
+ActiveRecord::Schema[7.0].define(version: 2023_09_18_102623) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "activities", force: :cascade do |t|
+    t.string "name"
+    t.integer "amount"
+    t.bigint "author_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["author_id"], name: "index_activities_on_author_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "name"
@@ -20,4 +29,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_18_090618) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "activities", "users", column: "author_id"
 end
