@@ -15,6 +15,15 @@ require 'faker'
 end
 
 50.times do
+  Category.create(
+    name: Faker::Food.dish,
+    icon: "run round"
+    author_id: User.all.sample.id
+  )
+end
+
+
+50.times do
   Activity.create(
     name: Faker::Food.ingredient,
     amount: Faker::Number.between(from: 1, to: 100),
