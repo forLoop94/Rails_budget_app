@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  resources :categories do
-    resources :activities
+  resources :categories, only: [:index, :show] do
+    resources :activities, only: [:index, :show]
   end
 
   resources :users

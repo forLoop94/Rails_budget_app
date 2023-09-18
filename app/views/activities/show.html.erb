@@ -3,8 +3,8 @@
 <%= render @activity %>
 
 <div>
-  <%= link_to "Edit this activity", edit_activity_path(@activity) %> |
-  <%= link_to "Back to activities", activities_path %>
+  <%#= link_to "Edit this activity", edit_activity_path(@activity) %> |
+  <%= link_to "Back to activities", category_activities_path(@category) %>
 
-  <%= button_to "Destroy this activity", @activity, method: :delete %>
+  <%#= button_to "Destroy this activity", @activity, method: :delete %>
 </div>

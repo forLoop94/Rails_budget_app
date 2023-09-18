@@ -4,10 +4,12 @@ class ActivitiesController < ApplicationController
   # GET /activities or /activities.json
   def index
     @activities = Activity.all
+    @category = Category.find(params[:category_id])
   end
 
   # GET /activities/1 or /activities/1.json
   def show
+    @activity = Activity.find(params[:id])
   end
 
   # GET /activities/new
