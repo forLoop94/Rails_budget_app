@@ -1,5 +1,5 @@
 class User < ApplicationRecord
   has_many :transactions
-  has_many :categorys
+  has_many :categories
   validates :name, presence: true
 end
