@@ -1,0 +1,13 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @category %>
+<% @activities.each do |activity| %>
+  <%= activity.name %>
+  <%= activity.amount %>
+<% end %>
+
+<div>
+  <%= link_to "Back to categories", categories_path %>
+
+  <%= button_to "Destroy this category", category_path(@category.id), method: :delete %>
+</div>
