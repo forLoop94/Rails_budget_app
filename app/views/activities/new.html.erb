@@ -1,9 +1,17 @@
 <h1>New activity</h1>
 
-<%= render "form", activity: @activity %>
-
-<br>
+<%= form_with model: @activity, url: category_activities_path, method: :post, local: true, scope: :category do |f|%>
+    <div>
+        <%= f.label :name, "Name" %><br>
+        <%= f.text_field :name,  :required => true, class:"form-control", placeholder: "What did you just buy?" %>
+    </div>
+    <div>
+        <%= f.label :amount, "Amount" %><br>
+        <%= f.number_field :amount,  :required => true, placeholder: "How much did it cost?" %>
+    </div>
+    <button type="submit" >Create</button>
+<%end%>
 
 <div>
-  <%= link_to "Back to activities", activities_path %>
+  <%= link_to "Back to activities", category_activities_path(@category) %>
 </div>

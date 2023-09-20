@@ -11,3 +11,5 @@
 
   <%= button_to "Destroy this category", category_path(@category.id), method: :delete %>
 </div>
+
+<%= link_to "New Activity", new_category_activity_path(@category.id) %>

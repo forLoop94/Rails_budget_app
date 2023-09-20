@@ -6,20 +6,37 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-User.create(name: "Charles")
-User.create(name: "Emem")
-User.create(name: "Esther")
+require 'faker'
 
-Category.create(name: "books", icon: "books icon", user_id: 89)
-Category.create(name: "music", icon: "music icon", user_id: 91)
+10.times do |index|
+  User.create(
+    name: Faker::Name.name,
+    email: "email#{index}@email.com",
+    password: "abcdef"
+  )
+end
 
-Activity.create(name: "horror", amount: 34, author_id: 89)
-Activity.create(name: "fiction", amount: 24, author_id: 89)
+50.times do
+  Category.create(
+    name: Faker::Food.dish,
+    icon: "icon",
+    user_id: User.all.sample.id
+  )
+end
 
-Activity.create(name: "hip hop", amount: 12, author_id: 91)
-Activity.create(name: "gospel", amount: 5, author_id: 91)
+50.times do
+  Activity.create(
+    name: Faker::Food.ingredient,
+    author: User.all.sample,
+    amount:Faker::Number.between(from: 1, to: 100),
+  )
+end
 
-CategoryActivity.create(category_id: 3, activity_id: 55)
-CategoryActivity.create(category_id: 3, activity_id: 56)
-CategoryActivity.create(category_id: 4, activity_id: 57)
-CategoryActivity.create(category_id: 4, activity_id: 58)
+50.times do
+  CategoryActivity.create(
+    activity: Activity.all.sample,
+    category_id: Category.all.sample.id,
+  )
+end
+
+puts  "#{Activity.count} activities, #{Category.count} categories, #{User.count} users and #{CategoryActivity.count} category activities were successfully created"
