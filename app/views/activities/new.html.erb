@@ -9,6 +9,13 @@
         <%= f.label :amount, "Amount" %><br>
         <%= f.number_field :amount,  :required => true, placeholder: "How much did it cost?" %>
     </div>
+
+    <p>Choose categories</p>
+    <em><%=@category.name%> has been selected for you</em>
+    <div>
+        <%= render "select_cat_form", categories: current_user.categories%>
+    </div>
+
     <button type="submit" >Create</button>
 <%end%>
 
