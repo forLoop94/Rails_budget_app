@@ -4,7 +4,7 @@ class ActivitiesController < ApplicationController
   # GET /activities or /activities.json
   def index
     @category = Category.find(params[:category_id])
-    @activities = category.activities
+    @activities = @category.activities
   end
 
   # GET /activities/1 or /activities/1.json
