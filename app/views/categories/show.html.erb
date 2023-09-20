@@ -6,10 +6,14 @@
   <%= activity.amount %>
 <% end %>
 
+<%if @activities.empty?%>
+  <p>This category is empty!</p>
+<%end%>
+
 <div>
   <%= link_to "Back to categories", categories_path %>
 
   <%= button_to "Destroy this category", category_path(@category.id), method: :delete %>
 </div>
 
-<%= link_to "New Activity", new_category_activity_path(@category.id) %>
+<%= button_to "New Activity", new_category_activity_path(@category.id) %>
