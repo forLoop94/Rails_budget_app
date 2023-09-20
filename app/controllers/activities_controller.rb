@@ -69,5 +69,4 @@ class ActivitiesController < ApplicationController
   def activity_params
     params.require(:category).permit(:name, :amount)
   end
-
 end
