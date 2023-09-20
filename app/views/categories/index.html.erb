@@ -1,5 +1,16 @@
 <p style="color: green"><%= notice %></p>
 
+<header>
+  <div>
+    <% if user_signed_in? %>
+      <%= button_to 'Sign out', destroy_user_session_path, method: :delete %>
+    <% else %>
+      <%= link_to "Sign in", new_user_session_path  %>
+      <%= link_to "Sign up", new_user_registration_path %>
+    <% end %>
+  </div>
+</header>
+
 <h1>Categories</h1>
 
 <div id="categories">

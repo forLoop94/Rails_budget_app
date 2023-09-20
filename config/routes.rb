@@ -4,4 +4,6 @@ Rails.application.routes.draw do
     resources :activities, only: [:new, :create]
   end
   root "categories#index"
+  # get "/welcome_page", to: "welcome_page#index"
+  resources :welcome_page, only: [:index]
 end

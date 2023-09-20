@@ -4,16 +4,17 @@ class ApplicationController < ActionController::Base
   before_action :authenticate_user!
 
   def after_sign_out_path_for(_resource_or_scope)
-    new_user_session_path
+    # new_user_session_path
+    welcome_page_index_path
   end
 
   def authenticate_user!
     return if user_signed_in?
 
     current_uri = request.env['PATH_INFO']
-    unless ['/users/sign_in', '/users/sign_up', '/users/password/new',
+    unless [welcome_page_index_path, '/users/sign_in', '/users/sign_up', '/users/password/new',
             user_password_path, user_registration_path].include?(current_uri)
-      redirect_to new_user_session_path
+      redirect_to welcome_page_index_path
     end
   end
 
