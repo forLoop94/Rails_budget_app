@@ -1,13 +1,10 @@
-<h1>New activity</h1>
 
-<div>
+<% content_for :page_title, "NEW ACTIVITY" %>
+<div class="headline-btn">
   <%= link_to "<", category_path(@category) , class:"link_to back" %>
 </div>
 
-<% content_for :page_title, "New Expense" %>
-<div class = "new-exp">
-    <div class="new_cat">
-        <%= render "form", activity: @activity %>
-    </div>
+<div class = "new_act">
+    <%= render "form", activity: @activity %>
 </div>
 <br>

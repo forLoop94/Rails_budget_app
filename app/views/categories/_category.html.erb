@@ -1,13 +1,13 @@
 
-<div id="<%= dom_id category %>">
-  <div>
-    <img src='<%= category.icon %>'/>
-    <span>
+<div id="<%= dom_id category %>" class="category">
+  <div class="icon-name">
+    <img src='<%= category.icon %>' class="icon"/>
+    <span class="cname">
       <p><%= category.name %></p>
       <p><%= category.created_at.to_date%></p>
     </span>
   </div>
-  <p>
+  <p class="tamount">
     $<%=category.total_amount%>
   </p>
 </div>

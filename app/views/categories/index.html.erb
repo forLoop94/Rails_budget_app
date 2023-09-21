@@ -1,8 +1,10 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Categories</h1>
+<% content_for :page_title, "CATEGORIES" %>
 
-<%= button_to "New category", new_category_path, class: "link_to newcat", method: :get %>
+<div  class="headline-btn">
+  <%= button_to "New category", new_category_path, class: "link_to newcat", method: :get %>
+</div>
 
 <div id="categories">
   <% @categories.each do |category| %>
