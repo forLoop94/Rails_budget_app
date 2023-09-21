@@ -1,25 +1,11 @@
 <p style="color: green"><%= notice %></p>
 
-<header>
-  <div>
-    <% if user_signed_in? %>
-      <%= button_to 'Sign out', destroy_user_session_path, method: :delete %>
-    <% else %>
-      <%= link_to "Sign in", new_user_session_path  %>
-      <%= link_to "Sign up", new_user_registration_path %>
-    <% end %>
-  </div>
-</header>
-
 <h1>Categories</h1>
+
+<%= button_to "New category", new_category_path, class: "link_to newcat", method: :get %>
 
 <div id="categories">
   <% @categories.each do |category| %>
-    <%= render category %>
-    <p>
-      <%= link_to "Show this category", category_path(category.id) %>
-    </p>
+    <%= link_to render(category), category_path(category) %>
   <% end %>
 </div>
-
-<%= button_to "New category", new_category_path, method: :get %>
