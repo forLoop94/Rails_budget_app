@@ -1,4 +1,4 @@
-<%= form_with(model: activity) do |form| %>
+<%= form_with model: @activity, url: category_activities_path, method: :post, local: true, scope: :category do |form| %>
   <% if activity.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(activity.errors.count, "error") %> prohibited this activity from being saved:</h2>
@@ -11,7 +11,23 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.submit %>
+  <div  class = "field">
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name , required: true, placeholder: "What did you just buy?" %>
   </div>
+
+  <div  class = "field">
+    <%= form.label :amount, style: "display: block" %>
+    <%= form.number_field :amount , required: true, placeholder: "How much did it cost?"%>
+  </div>
+
+  <p>Choose categories</p>
+  <i><%=@category.name%> has been selected for you</i>
+  <div>
+    <%= render "select_cat_form", categories: current_user.categories%>
+  </div>
+    <div  class = "field actions">
+    <%= form.submit 'save', class: "link_to" %>
+  </div>
+</div>
 <% end %>

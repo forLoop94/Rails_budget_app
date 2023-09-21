@@ -1,19 +1,8 @@
 <h1>New category</h1>
 
-
-<%= form_with model: @category, url: categories_path, method: :post, local: true, scope: :category do |f|%>
-    <div>
-        <%= f.label :name, "Name" %><br>
-        <%= f.text_field :name,  :required => true, placeholder: "Enter the name of the category" %>
-    </div>
-    <div>
-        <%= f.label :icon, "Icon" %><br>
-        <%= f.text_field :icon,  :required => true %>
-        <div id="icon-error" ></div>
-    </div>
-    <button type="submit">Create</button>
-<%end%>
-
 <div>
-  <%= link_to "Back to categories", categories_path %>
+  <%= link_to " < ", categories_path, class:"link_to back"%>
+</div>
+<div class="new_cat">
+    <%= render "form", category: @category %>
 </div>

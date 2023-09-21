@@ -11,7 +11,17 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.submit %>
+  <div class="field">
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name ,placeholder: "Enter the name of the category", autofocus:true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :icon, style: "display: block" %>
+    <%= form.text_field :icon , placeholder: "Enter photo url" %>
+  </div>
+
+  <div class="field actions">
+    <%= form.submit "save", class: "link_to" %>
   </div>
 <% end %>

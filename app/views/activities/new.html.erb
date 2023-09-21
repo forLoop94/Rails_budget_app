@@ -1,24 +1,13 @@
 <h1>New activity</h1>
 
-<%= form_with model: @activity, url: category_activities_path, method: :post, local: true, scope: :category do |f|%>
-    <div>
-        <%= f.label :name, "Name" %><br>
-        <%= f.text_field :name,  :required => true, class:"form-control", placeholder: "What did you just buy?" %>
-    </div>
-    <div>
-        <%= f.label :amount, "Amount" %><br>
-        <%= f.number_field :amount,  :required => true, placeholder: "How much did it cost?" %>
-    </div>
-
-    <p>Choose categories</p>
-    <i><%=@category.name%> has been selected for you</i>
-    <div>
-        <%= render "select_cat_form", categories: current_user.categories%>
-    </div>
-
-    <button type="submit" >Create</button>
-<%end%>
-
 <div>
-  <%= link_to "Back to activities", category_path(@category) %>
+  <%= link_to "<", category_path(@category) , class:"link_to back" %>
 </div>
+
+<% content_for :page_title, "New Expense" %>
+<div class = "new-exp">
+    <div class="new_cat">
+        <%= render "form", activity: @activity %>
+    </div>
+</div>
+<br>
