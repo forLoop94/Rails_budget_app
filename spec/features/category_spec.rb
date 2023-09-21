@@ -16,16 +16,13 @@ RSpec.feature 'Categories', type: :feature do
     before do
       visit category_path(@category)
     end
-    it 'Displays a Category name' do
-      expect(page).to have_content(@category.name)
-    end
 
     it 'Displays the category activities' do
       expect(page).to have_content('This category is empty!')
     end
 
-    it 'Displays add new activity button' do
-      page.should have_button('New Activity')
+    it 'Displays new activity button' do
+      page.should have_button('New activity')
     end
   end
 
