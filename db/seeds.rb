@@ -19,7 +19,7 @@ end
 50.times do
   Category.create(
     name: Faker::Food.dish,
-    icon: "icon",
+    icon: Faker::Avatar.image,
     user_id: User.all.sample.id
   )
 end

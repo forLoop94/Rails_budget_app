@@ -1,15 +1,22 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @category %>
-<% @activities.each do |activity| %>
-  <%= activity.name %>
-  <%= activity.amount %>
-<% end %>
+<% content_for :page_title, "Activities" %>
+<p class="tamountE"> Total amount:          <%= @category.total_amount%> </p>
 
-<div>
-  <%= link_to "Back to categories", categories_path %>
-
-  <%= button_to "Destroy this category", category_path(@category.id), method: :delete %>
+<div id="activities">
+  <% @activities.each do |activity| %>
+    <%= render activity %>
+  <% end %>
 </div>
 
-<%= link_to "New Activity", new_category_activity_path(@category.id) %>
+<%if @activities.empty?%>
+  <p>This category is empty!</p>
+<%end%>
+
+<div >
+  <div class = "links" >
+  <%= button_to "Back to categories", categories_path, method: :get, class: "link_to"%>
+  <%= button_to "New activity", new_category_activity_path(@category) , class: "link_to", method: :get %>
+  </div>
+  <%= button_to "Destroy this category", category_path(@category.id), method: :delete , class: "link_to delete" %>
+</div>
