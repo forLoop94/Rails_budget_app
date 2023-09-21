@@ -22,9 +22,9 @@ RSpec.describe 'categories page', type: :system do
 
   let!(:activities) do
     category.activities.create!([
-                                { name: 'burger', amount: 12, author: user1 },
-                                { name: 'chips', amount: 5, author: user1 }
-                              ])
+                                  { name: 'burger', amount: 12, author: user1 },
+                                  { name: 'chips', amount: 5, author: user1 }
+                                ])
   end
 
   describe 'show correct activities for a category' do

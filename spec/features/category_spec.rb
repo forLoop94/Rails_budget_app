@@ -4,7 +4,8 @@ RSpec.feature 'Categories', type: :feature do
   before(:each) do
     @user = User.create(name: 'Forloop', email: 'forloop@gmail.com', password: '123456')
     @category = @user.categories.create(
-      icon: 'https://media.gettyimages.com/id/157482029/photo/stack-of-books.jpg?s=612x612&w=gi&k=20&c=_Yaofm8sZLZkKs1eMkv-zhk8K4k5u0g0fJuQrReWfdQ=', name: 'books'
+      icon: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd7CGgx0nPzG_Zw9_XEzbm50zzLtLwJXa5853bJXaS&s',
+      name: 'books'
     )
     visit new_user_session_path
     fill_in 'user[email]', with: @user.email
