@@ -14,13 +14,15 @@
   </head>
 
   <body>
-    <header>
-   <% if user_signed_in? %>
-      <%= render "layouts/nav" %>
-   <%end%>
-   </header>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= yield %>
+    <main>
+      <header>
+        <% if user_signed_in? %>
+            <%= render "layouts/nav" %>
+        <%end%>
+      </header>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+      <%= yield %>
+    </main>
   </body>
 </html>

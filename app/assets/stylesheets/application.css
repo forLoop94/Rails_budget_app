@@ -31,6 +31,15 @@
 body {
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--ash);
+}
+
+main {
+  width: 400px;
+  background-color: var(--white);
 }
 
 .heading {
@@ -114,8 +123,8 @@ i {
   display: none;
   position: absolute;
   background-color: var(--blue);
-  min-width: 160px;
-  margin: 10px -20px;
+  min-width: 140px;
+  margin: 10px -16px;
   z-index: 1;
 }
 
@@ -125,6 +134,7 @@ i {
 
 .nav-link {
   color: var(--white);
+  width: 100%;
 }
 
 .nav-link:hover {
