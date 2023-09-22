@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   resources :categories, only: [:index, :show, :new, :create, :destroy] do
-    resources :activities, only: [:new, :create]
+    resources :activities, only: [:new, :create, :destroy]
   end
   root "categories#index"
   # get "/welcome_page", to: "welcome_page#index"
