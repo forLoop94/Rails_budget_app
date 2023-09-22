@@ -29,9 +29,9 @@ class ActivitiesController < ApplicationController
     @category_activity = CategoryActivity.new(activity: @activity, category_id: params[:category_id])
 
     if @activity.save && @category_activity.save
-      redirect_to category_path(params[:category_id]), notice: 'Transaction created successfully'
+      redirect_to category_path(params[:category_id]), notice: 'Activity created successfully'
     else
-      redirect_to category_path(params[:category_id]), alert: 'An error occured when creating the transaction'
+      redirect_to category_path(params[:category_id]), alert: 'An error occured when creating the activity'
     end
   end
 
@@ -50,10 +50,12 @@ class ActivitiesController < ApplicationController
 
   # DELETE /activities/1 or /activities/1.json
   def destroy
+    @activity = Activity.find(params[:id])
     @activity.destroy
+    @category = Category.find(params[:category_id])
 
     respond_to do |format|
-      format.html { redirect_to activities_url, notice: 'Activity was successfully destroyed.' }
+      format.html { redirect_to category_path(@category.id), notice: 'Activity was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

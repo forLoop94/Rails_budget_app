@@ -1,0 +1,16 @@
+<ul class="navbar">
+    <li class="dropdown">
+        <a class="btn dropbtn"><i class="fa-solid fa-bars"></i></a>
+            <div class="dropdown-content">
+            <div class="deco"></div>
+            <%= button_to 'Home',  categories_path, class: "nav-link", method: :get %>
+            <%= button_to 'Sign out', destroy_user_session_path, class: "nav-link", method: :delete %>
+            </div>
+    </li>
+    <li class="page-title"> <%= yield :page_title %> </li>
+    <li class="searchbtn">
+        <i class="fa-solid fa-search"></i>
+    </li>
+</ul>
+
+

@@ -1,0 +1,29 @@
+
+.welcome-container,
+.centralize {
+  height: 90vh;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.centralize {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.login {
+  width: 70%;
+}
+
+.topicm {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 10rem;
+}
+
+.sign-up {
+  background-color: transparent !important;
+  color: black;
+}

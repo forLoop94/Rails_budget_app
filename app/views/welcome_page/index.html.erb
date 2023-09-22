@@ -1,12 +1,8 @@
-<h1>Welcome to our page</h1>
 
-<header>
-  <div>
-    <% if user_signed_in? %>
-      <%= button_to 'Sign out', destroy_user_session_path, method: :delete %>
-    <% else %>
-      <%= link_to "Sign in", new_user_session_path  %>
-      <%= link_to "Sign up", new_user_registration_path %>
-    <% end %>
+<div class="welcome-container">
+  <h1 class="topicm">thrifty</h1>
+  <div class="centralize">
+    <%= link_to "Log_in", new_user_session_path , class: "link_to login"%>
+    <%= link_to "sign_up", new_user_registration_path, class: "link_to login" %>
   </div>
-</header>
+</div>

@@ -1,0 +1,90 @@
+:root {
+  --blue: #3778c2;
+  --green: #5fb523;
+  --ash: #434b54;
+  --black: #555e77;
+  --white: #fff;
+}
+
+#categories,
+#activities {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0.5rem;
+}
+
+.category {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--black);
+  box-shadow: rgba(60, 64, 67, 0.3) 0 1px 2px 0, rgba(60, 64, 67, 0.15) 0 1px 3px 1px;
+  min-height: 4rem;
+  padding: 0 0.5rem;
+}
+
+.icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.icon-name {
+  display: flex;
+  line-height: normal;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tamount {
+  font-weight: 600;
+}
+
+.newcat {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* activities */
+
+.activity {
+  box-shadow: rgba(59, 170, 255, 0.101) 0 1px 2px 0, rgba(60, 64, 67, 0.15) 0 1px 3px 1px;
+  padding: 0.5rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tamountE {
+  display: flex;
+  justify-content: center;
+}
+
+.delete {
+  margin: 1rem auto;
+}
+
+.delete:hover {
+  background-color: rgba(255, 0, 0, 0.869);
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.button_to {
+  margin: 1rem;
+}
+
+.note {
+  text-align: center;
+  font-style: italic;
+  font-size: 2rem;
+  color: var(--ash);
+}
+
+/* new activities */
+.back {
+  margin-left: 0.7rem;
+}
