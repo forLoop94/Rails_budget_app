@@ -37,7 +37,7 @@ RSpec.feature 'Categories', type: :feature do
     end
 
     it 'the page title' do
-      expect(page).to have_content('Categories')
+      expect(page).to have_content('CATEGORIES')
     end
 
     it 'Displays Total Amount' do
@@ -54,7 +54,7 @@ RSpec.feature 'Categories', type: :feature do
       visit new_category_path
       fill_in 'category[name]', with: 'Dead zone'
       fill_in 'category[icon]', with: 'https://media.gettyimages.com/id/157482029/photo/stack-of-books.jpg?s=612x612&w=gi&k=20&c=_Yaofm8sZLZkKs1eMkv-zhk8K4k5u0g0fJuQrReWfdQ='
-      click_button 'Create'
+      click_button 'Save'
     end
 
     it 'Displays the Category name' do

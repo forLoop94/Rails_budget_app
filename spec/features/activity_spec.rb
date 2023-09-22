@@ -36,11 +36,11 @@ RSpec.describe 'categories page', type: :system do
       expect(page).to have_content('Total amount:')
     end
     it 'has Back to categories button' do
-      expect(page).to have_button('Back to categories')
+      expect(page).to have_button('<')
     end
 
     it 'has new destroy category link' do
-      expect(page).to have_button('Destroy this category')
+      expect(page).to have_button('Delete Category')
     end
     it 'has activity details' do
       activities.each do |activity|
