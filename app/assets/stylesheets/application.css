@@ -33,8 +33,8 @@ body {
   padding: 0;
   display: flex;
   justify-content: center;
-  align-items: center;
   background-color: var(--ash);
+  height: 100vh;
 }
 
 main {
