@@ -1,11 +1,11 @@
 
-
-.welcome-container, .centralize {
- height: 90vh;
- padding: 2rem;
- display: flex;
- justify-content: center;
- flex-direction: column;
+.welcome-container,
+.centralize {
+  height: 90vh;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .centralize {

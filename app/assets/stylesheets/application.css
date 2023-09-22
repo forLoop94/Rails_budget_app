@@ -14,7 +14,7 @@
  *= require_self
  */
 
- :root {
+:root {
   --blue: #3778c2;
   --green: #5fb523;
   --ash: #434b54;
@@ -94,7 +94,8 @@ i {
   height: 1rem;
 }
 
-.fa-bars, .fa-search {
+.fa-bars,
+.fa-search {
   font-size: 1.5rem;
 }
 
