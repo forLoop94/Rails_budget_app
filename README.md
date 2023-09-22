@@ -94,12 +94,12 @@ To run tests, run the following commands:
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Deployment <a name="Deployment"></a>
-Deployment:
+Deployment: [Thrifty](https://thrifty-ma5c.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🎞️ Presentation Video <a name="video"></a>
-Video:
+Video: [Presentation](https://www.loom.com/share/36ae6cb1537b428596be98fbb1ab9c7b)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
