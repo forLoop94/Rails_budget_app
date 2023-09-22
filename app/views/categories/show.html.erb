@@ -1,7 +1,10 @@
-<p style="color: green"><%= notice %></p>
-
 <% content_for :page_title, "ACTIVITIES" %>
+
 <p class="tamountE"> Total amount:          <%= @category.total_amount%> </p>
+
+<div  class="headline-btn">
+  <%= button_to "<", categories_path, method: :get, class: "link_to"%>
+</div>
 
 <div id="activities">
   <% @activities.each do |activity| %>
@@ -15,8 +18,7 @@
 
 <div >
   <div class = "links" >
-  <%= button_to "Back to categories", categories_path, method: :get, class: "link_to"%>
-  <%= button_to "New activity", new_category_activity_path(@category) , class: "link_to", method: :get %>
+    <%= button_to "New activity", new_category_activity_path(@category) , class: "link_to", method: :get %>
+    <%= button_to "Delete Category", category_path(@category.id), method: :delete , class: "link_to delete" %>
   </div>
-  <%= button_to "Destroy this category", category_path(@category.id), method: :delete , class: "link_to delete" %>
 </div>

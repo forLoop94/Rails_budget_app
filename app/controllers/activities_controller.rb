@@ -29,9 +29,9 @@ class ActivitiesController < ApplicationController
     @category_activity = CategoryActivity.new(activity: @activity, category_id: params[:category_id])
 
     if @activity.save && @category_activity.save
-      redirect_to category_path(params[:category_id]), notice: 'Transaction created successfully'
+      redirect_to category_path(params[:category_id]), notice: 'Activity created successfully'
     else
-      redirect_to category_path(params[:category_id]), alert: 'An error occured when creating the transaction'
+      redirect_to category_path(params[:category_id]), alert: 'An error occured when creating the activity'
     end
   end
 
