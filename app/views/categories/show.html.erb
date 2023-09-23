@@ -1,24 +1,41 @@
-<% content_for :page_title, "ACTIVITIES" %>
+<% content_for :page_title, "DETAILS" %>
 
-<p class="tamountE"> Total amount:          <%= @category.total_amount%> </p>
+<main>
+  <header>
+    <ul class="navbar">
+      <li>
+        <%= button_to categories_path, method: :get, class: "back_to" do %>
+          <i class="fa-solid fa-arrow-left"></i>
+        <% end %>
+      </li>
+      <li class="page-title"> <%= yield :page_title %> </li>
+      <li class="searchbtn">
+        <i class="fa-solid fa-search"></i>
+      </li>
+    </ul>
+  </header>
 
-<div  class="headline-btn">
-  <%= button_to "<", categories_path, method: :get, class: "link_to"%>
-</div>
+  <p class="suc_notice"><%= notice %></p>
+  <p class="err_alert"><%= alert %></p>
 
-<div id="activities">
-  <% @activities.each do |activity| %>
-    <%= render activity %>
-  <% end %>
-</div>
+  <p class="tamountE"> Total amount:          <%= @category.total_amount%> </p>
 
-<%if @activities.empty?%>
-  <p class="note">This category is empty!</p>
-<%end%>
-
-<div >
-  <div class = "links" >
-    <%= button_to "New activity", new_category_activity_path(@category) , class: "link_to", method: :get %>
-    <%= button_to "Delete Category", category_path(@category.id), method: :delete, class: "link_to delete" %>
+  <div id="activities">
+    <% @activities.each do |activity| %>
+      <%= render activity %>
+    <% end %>
   </div>
-</div>
+
+  <%if @activities.empty?%>
+    <p class="note">This category is empty!</p>
+  <%end%>
+
+  <div >
+    <div class = "links" >
+      <%= button_to "New activity", new_category_activity_path(@category) , class: "link_to", method: :get %>
+      <%= button_to "Delete Category", category_path(@category.id), method: :delete, class: "link_to delete" %>
+    </div>
+  </div>
+</main>
+
+

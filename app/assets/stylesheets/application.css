@@ -39,8 +39,7 @@ body {
 
 main {
   width: 400px;
-  background-color: var(--white);
-  overflow-y: scroll;
+  background-color: rgb(244, 243, 243);
 }
 
 .heading {
@@ -96,12 +95,17 @@ i {
 }
 
 .fa-bars,
-.fa-search {
+.fa-search,
+.fa-arrow-left {
   font-size: 1.5rem;
 }
 
 .fa-search {
-  margin-top: 0.8rem;
+  margin-top: 1.2rem;
+}
+
+.fa-bars {
+  margin-top: 0.4rem;
 }
 
 .headline-btn {
@@ -162,8 +166,29 @@ i {
   width: 100%;
 }
 
+.extra-links-container {
+  display: flex;
+  justify-content: flex-end;
+  background-color: var(--blue);
+  padding: 0 1rem;
+}
+
+.extra-links {
+  display: flex;
+  justify-content: space-between;
+  width: 65%;
+  color: white;
+  height: 3rem;
+  align-items: flex-end;
+  padding: 0;
+}
+
+.ancient {
+  color: rgb(199, 194, 194);
+}
+
 .page-title {
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin-top: 0.4rem;
   color: #fff;
 }
