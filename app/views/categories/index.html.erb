@@ -1,0 +1,31 @@
+<% content_for :page_title, "CATEGORIES" %>
+
+<main>
+  <header>
+    <% if user_signed_in? %>
+        <%= render "layouts/nav" %>
+    <%end%>
+    <div class="extra-links-container">
+      <div class="extra-links">
+        <p class="recent">Most recent</p>
+        <p class="ancient">Most ancient</p>
+      </div>
+    </div>
+  </header>
+  <p class="suc_notice"><%= notice %></p>
+  <p class="err_alert"><%= alert %></p>
+
+  <%if @categories.empty?%>
+    <p class="note">You have no categories yet!</p>
+  <%end%>
+
+  <div id="categories">
+    <% @categories.each do |category| %>
+      <%= link_to render(category), category_path(category) %>
+    <% end %>
+  </div>
+
+  <div  class="cat-btn-container">
+    <%= button_to "New category", new_category_path, class: "cat-btn", method: :get %>
+  </div>
+</main>

@@ -1,0 +1,8 @@
+<%categories.each do |category|%>
+  <div class="form-check">
+      <input name="categories" type="checkbox"  <%="checked disabled" if category.id.to_s == params[:category_id]%> id="check-b" value=<%=category.id%>>
+      <label for="check-b">
+          <%=category.name%>
+      </label>
+  </div>
+<%end%>

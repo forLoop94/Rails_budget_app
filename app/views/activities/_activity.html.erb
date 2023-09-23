@@ -1,0 +1,16 @@
+<div id="<%= dom_id activity %>" class="activity">
+  <div>
+    <p>
+      <strong>Name:</strong>
+      <%= activity.name %>
+    </p>
+    <p>
+      <strong>Amount:</strong>
+      <%= activity.amount %>
+    </p>
+  </div>
+  <div>
+    <%= button_to "Delete", category_activity_path(@category.id, activity.id), class: "link_to delete", method: :delete %>
+  </div>
+</div>
+
