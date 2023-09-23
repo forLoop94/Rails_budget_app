@@ -21,28 +21,67 @@
   color: var(--black);
   box-shadow: rgba(60, 64, 67, 0.3) 0 1px 2px 0, rgba(60, 64, 67, 0.15) 0 1px 3px 1px;
   min-height: 4rem;
-  padding: 0 0.5rem;
+  padding: 0.5rem;
+  background-color: var(--white);
 }
 
 .icon {
-  width: 2rem;
-  height: 2rem;
+  width: 5rem;
+  height: 5rem;
+  border: 1px solid rgb(231, 226, 226);
+  border-radius: 5px;
 }
 
 .icon-name {
   display: flex;
   line-height: normal;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1rem;
+  width: 80%;
+}
+
+.ctime {
+  font-size: 12px;
 }
 
 .tamount {
   font-weight: 600;
+  align-self: flex-start;
 }
 
 .newcat {
   display: flex;
   justify-content: space-evenly;
+}
+
+.cat-btn-container {
+  background-color: var(--green);
+  padding: 1px 2px;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.cat-btn {
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--green);
+  border: 1px solid white;
+  border-radius: 3px;
+  color: var(--white);
+  z-index: 2;
+}
+
+.cat-btn:hover {
+  background-color: var(--white);
+  color: var(--ash);
+  font-size: 1rem;
+}
+
+.back_to {
+  font: 4rem;
+  border: none;
+  background: transparent;
+  color: white;
 }
 
 /* activities */
