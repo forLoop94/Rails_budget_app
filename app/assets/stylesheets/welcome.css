@@ -1,26 +1,31 @@
 
-.welcome-container,
-.centralize {
-  height: 90vh;
-  padding: 2rem;
+.welcome-container {
+  width: 100%;
+  height: 100vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
+  background-color: white;
+  position: relative;
 }
 
 .centralize {
-  align-items: center;
+  position: absolute;
+  top: 1rem;
+  display: flex;
   justify-content: space-between;
+  width: 100%;
+  padding: 0 1rem;
 }
 
 .login {
-  width: 70%;
+  width: 25%;
 }
 
 .topicm {
   font-size: 3rem;
   font-weight: 800;
-  margin-bottom: 10rem;
+  margin-top: 5%;
 }
 
 .sign-up {

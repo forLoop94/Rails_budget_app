@@ -15,8 +15,6 @@
   justify-content: center;
   margin: 1rem;
   padding: 1rem;
-  box-shadow: rgba(14, 30, 37, 0.12) 0 2px 4px 0, rgba(14, 30, 37, 0.32) 0 2px 16px 0;
-  overflow-y: scroll;
 }
 
 .field {
@@ -29,6 +27,13 @@
   width: 100%;
   height: 2rem;
   margin: 0.3rem;
+}
+
+.submit {
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .shared {
@@ -52,5 +57,12 @@
 }
 
 .reg-title {
-  text-align: center;
+  text-align: left;
+  margin-left: 0.8rem;
+}
+
+.auth-alt {
+  position: absolute;
+  top: 2.5rem;
+  right: 2rem;
 }

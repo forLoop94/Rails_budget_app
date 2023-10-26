@@ -1,9 +1,6 @@
-
-<h1 class="reg-title">Sign up</h1>
-
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
-
+  <h1 class="reg-title">Sign up</h1>
   <div class="field">
     <%= f.label :name %><br />
     <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "Enter your name" %>
@@ -27,10 +24,14 @@
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
-  <div class="actions">
+  <div class="submit">
     <%= f.submit "Sign up", class: "link_to" %>
   </div>
 
-  <%= render "devise/shared/links" %>
+  <div class="auth-alt">
+    <%= link_to "Log in", new_session_path(resource_name), class: "link_to back" %>
+  </div>
+
+  <%#= render "devise/shared/links" %>
 <% end %>
 

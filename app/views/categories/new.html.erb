@@ -1,8 +1,9 @@
 <% content_for :page_title, "NEW CATEGORY" %>
 
-<div class="headline-btn">
-  <%= link_to " < ", categories_path, class:"link_to back"%>
-</div>
 <div class="new_cat">
-    <%= render "form", category: @category %>
+  <h1>Add a new category</h1>
+  <div class="headline-btn">
+    <%= link_to " < ", categories_path, class:"link_to back"%>
+  </div>
+  <%= render "form", category: @category %>
 </div>
