@@ -1,10 +1,11 @@
 
 <% content_for :page_title, "NEW ACTIVITY" %>
-<div class="headline-btn">
-  <%= link_to "<", category_path(@category) , class:"link_to back" %>
-</div>
 
 <div class = "new_act">
-    <%= render "form", activity: @activity %>
+  <h1>Add a new Transaction</h1>
+  <div class="headline-btn">
+    <%= link_to "<", category_path(@category) , class:"link_to back" %>
+  </div>
+  <%= render "form", activity: @activity %>
 </div>
 <br>
